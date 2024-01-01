@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://bts5jci1g7dng"]
+
+[ext_resource type="Script" path="res://scenes/bullet.gd" id="1_nxdcu"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_deejk"]
+size = Vector2(20, 20)
+
+[node name="bullet" type="Area2D"]
+script = ExtResource("1_nxdcu")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("PlaceholderTexture2D_deejk")
+
+[node name="ATK" type="Label" parent="."]
+offset_left = -18.0
+offset_top = -27.0
+offset_right = 22.0
+offset_bottom = -4.0
+theme_override_font_sizes/font_size = 8
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1

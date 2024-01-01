@@ -1,0 +1,130 @@
+[gd_scene load_steps=9 format=3 uid="uid://du06le77qt8ev"]
+
+[ext_resource type="PackedScene" uid="uid://cvnfi5rh1mu8i" path="res://scenes/slot.tscn" id="1_45kja"]
+[ext_resource type="Script" path="res://scenes/Inventory.gd" id="1_b86x1"]
+[ext_resource type="Script" path="res://scenes/UI.gd" id="1_ia5js"]
+[ext_resource type="Script" path="res://scenes/Character.gd" id="2_drkmm"]
+[ext_resource type="PackedScene" uid="uid://d6igyleomo14" path="res://scenes/passive_slot.tscn" id="2_ipxcc"]
+[ext_resource type="PackedScene" uid="uid://dye84v8miy1p0" path="res://scenes/player.tscn" id="5_4rec0"]
+[ext_resource type="PackedScene" uid="uid://dt710hjb5v2kv" path="res://scenes/abstract_item.tscn" id="6_2y3ky"]
+[ext_resource type="PackedScene" uid="uid://casuq6j07a77f" path="res://scenes/active_slot.tscn" id="6_08lgf"]
+
+[node name="TestScene" type="Node2D"]
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_ia5js")
+
+[node name="Inventory" type="GridContainer" parent="UI"]
+layout_mode = 0
+offset_left = 123.0
+offset_top = 15.0
+offset_right = 295.0
+offset_bottom = 99.0
+columns = 4
+script = ExtResource("1_b86x1")
+
+[node name="slot" parent="UI/Inventory" instance=ExtResource("1_45kja")]
+layout_mode = 2
+
+[node name="slot2" parent="UI/Inventory" instance=ExtResource("1_45kja")]
+layout_mode = 2
+
+[node name="slot3" parent="UI/Inventory" instance=ExtResource("1_45kja")]
+layout_mode = 2
+
+[node name="slot4" parent="UI/Inventory" instance=ExtResource("1_45kja")]
+layout_mode = 2
+
+[node name="slot5" parent="UI/Inventory" instance=ExtResource("1_45kja")]
+layout_mode = 2
+
+[node name="slot6" parent="UI/Inventory" instance=ExtResource("1_45kja")]
+layout_mode = 2
+
+[node name="slot7" parent="UI/Inventory" instance=ExtResource("1_45kja")]
+layout_mode = 2
+
+[node name="slot8" parent="UI/Inventory" instance=ExtResource("1_45kja")]
+layout_mode = 2
+
+[node name="slot9" parent="UI/Inventory" instance=ExtResource("1_45kja")]
+layout_mode = 2
+
+[node name="slot10" parent="UI/Inventory" instance=ExtResource("1_45kja")]
+layout_mode = 2
+
+[node name="slot11" parent="UI/Inventory" instance=ExtResource("1_45kja")]
+layout_mode = 2
+
+[node name="slot12" parent="UI/Inventory" instance=ExtResource("1_45kja")]
+layout_mode = 2
+
+[node name="Character" type="Control" parent="UI"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_drkmm")
+
+[node name="PassiveSlot" parent="UI/Character" instance=ExtResource("2_ipxcc")]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 16.0
+offset_right = 96.0
+offset_bottom = 56.0
+slot_type = 1
+
+[node name="PassiveSlot2" parent="UI/Character" instance=ExtResource("2_ipxcc")]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 64.0
+offset_right = 96.0
+offset_bottom = 104.0
+slot_type = 2
+
+[node name="PassiveSlot3" parent="UI/Character" instance=ExtResource("2_ipxcc")]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 112.0
+offset_right = 96.0
+offset_bottom = 152.0
+slot_type = 3
+
+[node name="ActiveSlot" parent="UI/Character" instance=ExtResource("6_08lgf")]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 96.0
+offset_right = 48.0
+offset_bottom = 136.0
+slot_type = 4
+
+[node name="ATK" type="Label" parent="UI"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="player" parent="." instance=ExtResource("5_4rec0")]
+position = Vector2(169, 87)
+
+[node name="AbstractItem" parent="." instance=ExtResource("6_2y3ky")]
+position = Vector2(64, 30)
+
+[node name="AbstractItem2" parent="." instance=ExtResource("6_2y3ky")]
+position = Vector2(170, 31)
+ID = "1"
+
+[node name="AbstractItem3" parent="." instance=ExtResource("6_2y3ky")]
+position = Vector2(268, 33)
+ID = "2"
+
+[node name="AbstractItem4" parent="." instance=ExtResource("6_2y3ky")]
+position = Vector2(266, 131)
+ID = "3"
+
+[node name="AbstractItem5" parent="." instance=ExtResource("6_2y3ky")]
+position = Vector2(110, 145)
+ID = "4"
